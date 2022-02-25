@@ -5,10 +5,31 @@ public class BetterThanHot {
 
         int answer = 0;
 
-        Integer[] scoville = {1, 2, 3, 9, 10, 12};
-        int K = 7;
+        int[] scoville = {9,6,8,7,5,5,4,2,1};
+        int K = 188;
 
-        Arrays.sort(scoville);
+        PriorityQueue<Integer> que = new PriorityQueue<Integer>();
+        for(int a : scoville){
+            que.add(a);
+        }
+        while(true){
+            System.out.println(que);
+            if(que.size() == 1) {
+                if(que.poll() >= K){
+                    break;
+                } else {
+                    answer = -1;
+                }
+                break;
+            }
+            int tmp1 = que.poll();
+            int tmp2 = que.poll();
+            if(tmp1 >= K) break;
+            else{
+                que.add(tmp1 + (tmp2*2));
+                answer ++;
+            }
+        }
 
 
 
