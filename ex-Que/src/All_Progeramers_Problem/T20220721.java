@@ -53,7 +53,7 @@ public class T20220721 {
             double during_times = Double.parseDouble(s_arr[2]);
             int during_time = (int) (during_times * 1000);
             //System.out.println("end_times:"+end_times);
-            //System.out.println("during_time:"+during_time);
+            System.out.println("during_time:"+during_time);
             int start_times = 0;
             if(end_times - during_time >= 0) start_times = end_times - during_time + 1;
             for(int i = start_times ; i <= end_times+999 ; i++){
