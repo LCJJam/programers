@@ -33,6 +33,7 @@ public class BetterThanHot {
 
 
 
+
         System.out.println(answer);
     }
 }
